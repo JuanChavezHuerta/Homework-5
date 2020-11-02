@@ -56,19 +56,18 @@ $(document).ready(function(){
         $("textarea").each(function () {
             var hour = parseInt($(this).attr("description"));
             if (hour === timeOfDay) {
-                $(this).addClass(".present");
+                $(this).addClass("present");
             } else if (hour < timeOfDay) {
-                $(this).addClass(".past");
+                $(this).addClass("past");
             } else {
-                $(this).addClass(".future");
+                $(this).addClass("future");
             }
         });
     }
-
+    
     //setting the current date inside of the id-currentDay with methods in the moment.js library
     $("#currentDay").text(moment().format('MMMM DD YYYY'));
-
-    
+    timeColor();
    });
    
    
